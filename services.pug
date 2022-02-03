@@ -1,0 +1,38 @@
+extends base.pug
+
+block context
+  - const currentPage = "services"
+
+block title
+    | services
+
+block content 
+  section(class="title")
+    h1 Nos services 
+    p Retrouvez ci-dessous l’ensemble de nos services. N’hésitez pas à nous contacter si vous avez besoin d’informations supplémentaires.
+  
+  section(class="section-primary services")
+
+    div(class="wrapper services")    
+      div(class="services-text")
+        img(src="images/map-pin.png")
+        h2 A domicile 
+        p Il n’est pas toujours aisé de pouvoir apporter soi-même son vélo dans un atelier pour le faire réparer. C’est pourquoi nous vous proposons un service à domicile. Nous fixons un rendez-vous afin de venir récupérer votre vélo chez vous, et vous le ramener lorsque celui-ci sera prêt.
+      div(class="pic1")
+      
+    div(class="wrapper services second")
+      div(class="pic2")
+      div(class="services-text")
+        img(src="images/user-check.png")
+        h2 Support client 
+        p Notre équipe est à votre service. Par téléphone du lundi au samedi (8h / 20h) au 01.23.45.67.89 ou directement à l’atelier du lundi au samedi entre 9h et 18h. N’hésitez pas à téléphoner ou passer nous voir.
+    
+    div(class="services-text")
+      img(src="images/watch.png")
+      h2 Service express
+      p Une sortie prévue ce week-end, mais vous aviez oublié que votre vélo a besoin d’une petite réparation ? Pas de problème, nous pouvons intervenir afin que votre vélo soit en état de rouler dans les 24h.
+    
+    div(class="services-text last")
+      img(src="images/tool.png")
+      h2 L'atelier
+      p Notre atelier est à la pointe. Nous pouvons vous faire essayer divers vélos et équipements et vous apporter tous les conseils nécessaires à votre pratique du cyclisme. Peu importe votre niveau ou vos envies, nos experts auront les réponses à toutes vos questions.

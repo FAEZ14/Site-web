@@ -1,0 +1,58 @@
+extends base.pug
+include components/index-link.pug
+
+block context
+  - const currentPage = "index"
+
+block title
+    | Accueil
+
+block content 
+
+    section(class="section-prime")
+      div(class="titre")
+        h1 Nous prenons soin de votre vélo
+      div(class="img-cont")
+        //img(src="images/velo.jpg", alt="")
+    section(class="section-second") 
+
+      div(class="wrapper wrapper-primary")
+        div(class="wrapper-content")
+          h1 Nous aimons le vélo
+          p Au-delà de l’objet, le vélo est pour nous une philosophie, un art de vivre. Vous pouvez nous faire confiance.
+          div(class="button button-default")
+            a(href="a-propos.pug") En savoir plus
+        div(class="image")
+
+      div(class="wrapper wrapper-base")
+        div(class="image")
+        div(class="wrapper-content")
+          h1 Un atelier professionnel 
+          p C’est dans notre atelier que nous réparons les vélos de nos clients et que nous testons les nouveaux produits. Aucun détail ne nous échappe.
+          div(class="button button-typ3")
+            a(href="a-propos.pug") En savoir plus
+        
+
+    section(class="section-service")
+
+      div(class="services")
+        +IndexLink("images/map-pin.png","images/Line 1.png","Services à domicile")
+          p Nous nous déplaçons pour récupérer et vous ramener votre vélo réparé chez vous, en nous adaptant à vos disponibilités.
+        
+        +IndexLink("images/user-check.png","images/Line 1.png","Services client") 
+          p Un service client à votre écoute pour vous conseiller par téléphone et vous recevoir en atelier.
+        
+        +IndexLink("images/watch.png","images/Line 1.png","Services express") 
+          p Vous avez besoin que votre vélo soit en état de rouler demain ? C’est possible.
+        
+        +IndexLink("images/tool.png","images/Line 1.png","Autres services")
+          p Réparations, conseils, équipements... Nous avons tout ce qu’il vous faut.
+
+      div(class="button button-primary")
+          a(href="a-propos.pug") En savoir plus
+
+
+    section(class="section section-image")
+      div(class="image first")
+      div(class="image second")
+      div(class="image third")

@@ -1,0 +1,55 @@
+block context
+  - const currentPage = null
+
+mixin NavItem(href)
+    li( class={
+            "header-nav-item": true,
+            "header-nav-item-current": currentPage === href.replace(".pug", "")
+            }
+    )        
+        a( href=href
+        )
+            block
+
+doctype html 
+html(lang="fr")
+    head
+        link(rel="stylesheet" href="style.css")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Roboto:wght@400;500;700&display=swap' rel='stylesheet')
+        title 
+            block title    
+    body
+        header(class="header")
+            div(class="header-inner")
+                img(class="header-logo" src="images/logo.png" alt="logo")
+                nav(class="header-nav")
+                    ul(class="header-nav-list")
+                        +NavItem("index.pug") Accueil 
+                        +NavItem("a-propos.pug") Qui sommes-nous ?
+                        +NavItem("services.pug") Services
+        main 
+            block content
+        footer 
+            div(class="address")
+                p
+                    | Be Biker Services
+                    br
+                    |143, avenue de Versailles
+                    br
+                    |75016 Paris
+                    br
+                    |contact@bebiker.fr
+                    br
+                    |01.23.45.67.89
+            nav(class="footer-nav")
+                ul(class="footer-nav-list") 
+                    li 
+                        a(href="index.pug") Accueil 
+                    li 
+                        a(href="a-propos.pug") Qui sommes nous ?
+                    li 
+                        a(href="services.pug") Services
